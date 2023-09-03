@@ -6,6 +6,13 @@ const jwt = require("../services/jwt");
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+	res.json({
+		error: false,
+		msg: "Bem-Vindo"
+	})
+})
+
 //user
 router.post("/user/create", UserController.store);
 router.post("/login", UserController.login);
